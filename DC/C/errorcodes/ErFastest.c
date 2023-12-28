@@ -16,7 +16,7 @@ void printLinkedList(struct Node* head) {
 
 int main() {
 
-    char myString[] = {'I', 'D', 'V', 'W', 'H', 'U', 'V'};
+    char myString[] = {'I', 'D', 'V', 'W', 'H', 'V', 'W'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Node* head = NULL;
