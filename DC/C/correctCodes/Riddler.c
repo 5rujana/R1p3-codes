@@ -64,7 +64,7 @@ void printQueue(struct Queue* queue) {
 }
 
 int main() {
-    char myString[] = {'T', 'K', 'F', 'F', 'N', 'G'};
+    char myString[] = {'T', 'K', 'F', 'F', 'N', 'G','T'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Queue myQueue;
