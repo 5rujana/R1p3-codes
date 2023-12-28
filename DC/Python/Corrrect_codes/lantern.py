@@ -1,3 +1,5 @@
+import sys
+
 class Stack:
     def __init__(self, max_size):
         self.data = [''] * max_size
@@ -12,7 +14,7 @@ class Stack:
     def push(self, value, max_size):
         if self.is_full(max_size):
             print("Stack overflow")
-            exit(EXIT_FAILURE)
+            sys.exit(1)
 
         self.top += 1
         self.data[self.top] = value
