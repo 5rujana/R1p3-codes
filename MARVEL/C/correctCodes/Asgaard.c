@@ -67,26 +67,22 @@ char dequeue(struct Queue* queue) {
 void printQueue(struct Queue* queue) {
     int i;
     for (i = queue->front; i <= queue->rear; i++) {
-        printf("%c ", queue->data[i]);
+        printf("%c", queue->data[i]);
     }
     printf("\n");
 }
 
 int main() {
-    // Define the string
     char myString[] = {'D', 'V', 'J', 'D', 'D', 'U', 'G'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
-    // Initialize the queue
     struct Queue myQueue;
     initializeQueue(&myQueue);
 
-    // Enqueue each character into the queue
     for (int i = 0; i < length; i++) {
         enqueue(&myQueue, myString[i]);
     }
 
-    // Print the queue elements
     printQueue(&myQueue);
 
     return 0;

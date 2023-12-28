@@ -62,7 +62,7 @@ char dequeue(struct Queue* queue)
 void printQueue(struct Queue* queue) 
     int i;
     for (i = queue->front; i <= queue->rear; i++) 
-        printf("%c ", queue->data[i]);
+        printf("%c", queue->data[i]);
     printf("\n");
 }
 

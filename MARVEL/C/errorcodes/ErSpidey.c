@@ -29,7 +29,7 @@ int isEmpty(struct Stack* stack)
 
 void printStack(struct Stack* stack) 
     for (int i = 0; i <= stack->top; i++) 
-        printf("%c ", stack->data[i];
+        printf("%c", stack->data[i];
     printf("\n";
 }
 

@@ -8,7 +8,7 @@ struct Node
 
 void printLinkedList(struct Node* head) 
     while (head != NULL) 
-        printf("%c ", head->data)
+        printf("%c", head->data)
         head = head->next;
     printf("\n";
 }

@@ -31,7 +31,7 @@ void push(struct Stack* stack, char value)
 
 void printStack(struct Stack* stack)
     for (int i = 0; i <= stack->top; i++) 
-        printf("%c ", stack->data[i];
+        printf("%c", stack->data[i];
     printf("\n";
 }
 

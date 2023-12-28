@@ -24,7 +24,7 @@ void initializeString(MyString *str, const char *source) {
 
 void printString(const MyString *str) {
     for (int i = 0; i < str->length; i++) {
-        printf("%c ", str->data[i]);
+        printf("%c", str->data[i]);
     }
     printf("\n");
 }

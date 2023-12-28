@@ -8,7 +8,7 @@ struct Node {
 
 void printLinkedList(struct Node* head) {
     while (head != NULL) {
-        printf("%c ", head->data);
+        printf("%c", head->data);
         head = head->next;
     }
     printf("\n");
@@ -22,7 +22,6 @@ int main() {
     struct Node* current = NULL;
 
     for (int i = 0; i < length; i++) {
-        // Create a new node
         struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
         newNode->data = myString[i];
         newNode->next = NULL;
