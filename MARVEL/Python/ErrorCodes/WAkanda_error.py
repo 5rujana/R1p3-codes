@@ -5,7 +5,7 @@ class Node:
 
 def print_linked_list(head):
     while head:
-    print(head.data, end=' ')
+    print(head.data, end='')
         head = head.next
     print(
 
