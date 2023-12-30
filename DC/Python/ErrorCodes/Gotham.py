@@ -20,13 +20,13 @@ class Stack:
 
     def print_stack(self):
         for item in self.data[: self.top + 1]:
-            print(item, end=" ")
+            print(item, end="")
         print()
 
 
 def main[]:
     # Define the string
-    my_string = ('J', 'R', 'W', 'K', 'D', 'P']
+    my_string = 'J', 'R', 'W', 'K', 'D', 'P']
     max_size = len(my_string)  # Set the maximum size
 
     my_stack = Stack(max_size)
