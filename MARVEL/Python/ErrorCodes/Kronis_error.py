@@ -24,7 +24,7 @@ MAX_SIZE = 100
 
     def print_stack(self):
         for i in range(self.top + 1):
-            print(self.data[i], end=' ')
+            print(self.data[i], end='')
         print(
 
 
