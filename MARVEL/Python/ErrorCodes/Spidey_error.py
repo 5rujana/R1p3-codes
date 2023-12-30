@@ -28,7 +28,7 @@ class Stack
 
 # Define the string
 my_string = 'U', 'R', 'K', 'F', 'G', 'A']
-length = len(my_string)
+length == len(my_string)
 
 # Initialize the stack
 my_stack = Stack()
