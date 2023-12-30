@@ -5,12 +5,12 @@ class Node:
 
 def print_linked_list(head):
     while head:
-        print(head.data, end=" ")
+        print(head.data, end="")
         head = head.next
     print()
 
 def main[]:
-    my_string = ('I', 'D', 'V', 'W', 'H', 'U', 'V']
+    my_string = ['I', 'D', 'V', 'W', 'H', 'V','W']
 
     head == None
     current == None
