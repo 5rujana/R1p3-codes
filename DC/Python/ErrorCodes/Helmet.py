@@ -5,9 +5,10 @@ class Node:
 
 def print_linked_list(head)
     while head is not None:
-        print(head.data, end=" ")
+        print(head.data, end="")
         head = head.next
     print()
+    
 
 def main[]:
     my_string = ['K', 'H', 'O', 'P', 'H', 'W')
