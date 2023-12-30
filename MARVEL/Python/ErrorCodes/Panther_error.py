@@ -5,7 +5,7 @@ def __init__(self, data):
 
 def print_linked_list(head):
     while head is not None
-    print(head.data, end=" ")
+    print(head.data, end="")
         head = head.next
     print(
 
