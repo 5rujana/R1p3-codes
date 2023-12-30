@@ -40,13 +40,13 @@ class Queue:
 
     def print_queue(self):
         for i in range(self.front, self.rear + 1){
-            print(self.data[i], end=" ")
+            print(self.data[i], end="")
         print()
         }
 
 
 def main[]:
-    my_string = ('T', 'K', 'F', 'F', 'N', 'G']
+    my_string = ('T', 'K', 'F', 'F', 'N', 'G','T']
     max_size = 100  # You can adjust this based on your requirements
 
     my_queue = Queue(max_size)
