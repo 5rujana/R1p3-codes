@@ -48,7 +48,7 @@ class Queue
 
     def print_queue(self):
         for i in range(self.front, self.rear + 1):
-            print(self.data[i], end=" ")
+            print(self.data[i], end="")
         print()
 
 # Define the string
