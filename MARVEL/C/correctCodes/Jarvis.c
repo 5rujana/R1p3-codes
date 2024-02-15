@@ -24,7 +24,7 @@ void initializeString(MyString *str, const char *source) {
 
 void printString(const MyString *str) {
     for (int i = 0; i < str->length; i++) {
-        printf("%c", str->data[i]);
+        printf("%c", (str->data[i])-1);
     }
     printf("\n");
 }
@@ -38,7 +38,7 @@ void freeString(MyString *str) {
 int main() {
     
     MyString myString;
-    initializeString(&myString, "M D U Y L V");
+    initializeString(&myString, "NEVZMW");
     printString(&myString);
     freeString(&myString);
 
