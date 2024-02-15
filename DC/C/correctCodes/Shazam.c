@@ -59,14 +59,14 @@ char dequeue(struct Queue* queue) {
 void printQueue(struct Queue* queue) {
     int i;
     for (i = queue->front; i <= queue->rear; i++) {
-        printf("%c", (queue->data[i])-2);
+        printf("%c", (queue->data[i])-3);
     }
     printf("\n");
 }
 
 int main() {
 
-    char myString[] = {'Y', 'M', 'F', 'E', 'F', 'R'};
+    char myString[] = {'Y', 'N', 'G', 'F', 'G', 'S'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Queue myQueue;
