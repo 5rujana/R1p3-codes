@@ -8,7 +8,7 @@ struct Node {
 
 void printLinkedList(struct Node* head) {
     while (head != NULL) {
-        printf("%c", head->data);
+        printf("%c", (head->data)-1);
         head = head->next;
     }
     printf("\n");
@@ -16,7 +16,7 @@ void printLinkedList(struct Node* head) {
 
 int main() {
     
-    char myString[] = {'Y', 'C', 'M', 'C', 'P', 'F', 'C'};
+    char myString[] = {'Z', 'D', 'N', 'D', 'Q', 'G', 'D'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Node* head = NULL;
@@ -40,7 +40,6 @@ int main() {
         }
     }
 
-    // Print the linked list
     printLinkedList(head);
 
     while (head != NULL) {
