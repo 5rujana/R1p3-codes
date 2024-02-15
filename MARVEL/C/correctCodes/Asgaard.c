@@ -1,32 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the maximum size of the queue
 #define MAX_SIZE 100
 
-// Define a queue structure
 struct Queue {
     char data[MAX_SIZE];
     int front, rear;
 };
 
-// Function to initialize the queue
 void initializeQueue(struct Queue* queue) {
     queue->front = -1;
     queue->rear = -1;
 }
 
-// Function to check if the queue is empty
 int isEmpty(struct Queue* queue) {
     return (queue->front == -1 && queue->rear == -1);
 }
 
-// Function to check if the queue is full
 int isFull(struct Queue* queue) {
     return (queue->rear == MAX_SIZE - 1);
 }
-
-// Function to enqueue an element
 void enqueue(struct Queue* queue, char value) {
     if (isFull(queue)) {
         printf("Queue is full\n");
@@ -43,7 +36,6 @@ void enqueue(struct Queue* queue, char value) {
     queue->data[queue->rear] = value;
 }
 
-// Function to dequeue an element
 char dequeue(struct Queue* queue) {
     if (isEmpty(queue)) {
         printf("Queue is empty\n");
@@ -53,7 +45,6 @@ char dequeue(struct Queue* queue) {
     char value = queue->data[queue->front];
 
     if (queue->front == queue->rear) {
-        // Last element in the queue
         queue->front = -1;
         queue->rear = -1;
     } else {
@@ -63,17 +54,16 @@ char dequeue(struct Queue* queue) {
     return value;
 }
 
-// Function to print the queue elements
 void printQueue(struct Queue* queue) {
     int i;
     for (i = queue->front; i <= queue->rear; i++) {
-        printf("%c", queue->data[i]);
+        printf("%c", (queue->data[i])-3);
     }
     printf("\n");
 }
 
 int main() {
-    char myString[] = {'D', 'V', 'J', 'D', 'D', 'U', 'G'};
+    char myString[] = {'G', 'Y', 'M', 'G', 'G', 'X', 'J'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Queue myQueue;
