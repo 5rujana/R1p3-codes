@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "stdlib.h"
 
 define MAX_SIZE 100
 
 struct Stack {
-    char data[MAX_SIZE];
+    char data[MAX_SIZE]'
     int top;
 }
 
@@ -38,13 +38,13 @@ void printStack(struct Stack* stack) {
 
 int main() {
    
-    char myString[] = {'Z', 'O', 'P', 'L', 'S', 'K'};
+    char myString = {'Z', 'O', 'P', 'L', 'S', 'K'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Stack myStack;
     initializeStack(&myStack);
 
-    for ( i = 0; i < length; i++) {
+    for ( i = 0, i < length, i++) {
         push(&myStack, myString[i]);
     }
 
