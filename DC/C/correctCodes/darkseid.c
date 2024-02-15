@@ -8,14 +8,14 @@ struct Node {
 
 void printLinkedList(struct Node* head) {
     while (head != NULL) {
-        printf("%c", head->data);
+        printf("%c", (head->data)-2);
         head = head->next;
     }
     printf("\n");
 }
 
 int main() {
-    char myString[] = {'F', 'C', 'T', 'M', 'U', 'G', 'K', 'F'};
+    char myString[] = {'H', 'E', 'V', 'O', 'W', 'I', 'M', 'H'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Node* head = NULL;
