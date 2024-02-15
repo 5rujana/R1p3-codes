@@ -16,7 +16,7 @@ struct Node* createNode(char data) {
 void printLinkedList(struct Node* head) {
     struct Node* current = head;
     while (current != NULL) {
-        printf("%c", current->data);
+        printf("%c", (current->data)-3);
         current = current->next;
     }
     printf("\n");
@@ -24,12 +24,12 @@ void printLinkedList(struct Node* head) {
 
 int main() {
 
-    struct Node* head = createNode('N');
-    head->next = createNode('B');
-    head->next->next = createNode('S');
-    head->next->next->next = createNode('W');
-    head->next->next->next->next = createNode('F');
-    head->next->next->next->next->next = createNode('M');
+    struct Node* head = createNode('Q');
+    head->next = createNode('E');
+    head->next->next = createNode('V');
+    head->next->next->next = createNode('Z');
+    head->next->next->next->next = createNode('I');
+    head->next->next->next->next->next = createNode('P');
 
     printLinkedList(head);
 
