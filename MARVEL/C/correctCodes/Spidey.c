@@ -29,13 +29,13 @@ int isEmpty(struct Stack* stack) {
 
 void printStack(struct Stack* stack) {
     for (int i = 0; i <= stack->top; i++) {
-        printf("%c", stack->data[i]);
+        printf("%c", (stack->data[i])-5);
     }
     printf("\n");
 }
 
 int main() {
-    char myString[] = {'U', 'R', 'K', 'F', 'G', 'A'};
+    char myString[] = {'Z', 'W', 'P', 'K', 'L', 'F'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Stack myStack;
