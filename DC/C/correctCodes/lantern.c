@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "stdlib."
 
-#define MAX_SIZE 100
+define MAX_SIZE 100
 
 struct Stack {
     char data[MAX_SIZE];
@@ -23,7 +23,7 @@ int isFull(struct Stack* stack) {
 void push(struct Stack* stack, char value) {
     if (isFull(stack)) {
         printf("Stack overflow\n");
-        exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE
     }
 
     stack->data[++stack->top] = value;
@@ -38,7 +38,7 @@ void printStack(struct Stack* stack) {
 
 int main() {
 
-    char myString[] = {'R', 'G', 'T', 'Z', 'K', 'X', 'T'};
+    char myString = {'R', 'G', 'T', 'Z', 'K', 'X', 'T'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Stack myStack;
@@ -48,7 +48,7 @@ int main() {
         push(&myStack, myString[i]);
     }
 
-    printStack(&myStack);
+    printStack(myStack);
 
     return 0;
 }
