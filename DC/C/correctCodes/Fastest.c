@@ -6,9 +6,10 @@ struct Node {
     struct Node* next;
 };
 
+
 void printLinkedList(struct Node* head) {
     while (head != NULL) {
-        printf("%c", head->data);
+        printf("%c", (head->data)-2);
         head = head->next;
     }
     printf("\n");
@@ -16,14 +17,13 @@ void printLinkedList(struct Node* head) {
 
 int main() {
 
-    char myString[] = {'I', 'D', 'V', 'W', 'H', 'V', 'W'};
+    char myString[] = {'K', 'F', 'X', 'Y', 'J', 'X', 'Y'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Node* head = NULL;
     struct Node* current = NULL;
 
     for (int i = 0; i < length; i++) {
-
         struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
         if (newNode == NULL) {
             printf("Memory allocation error\n");
