@@ -2,40 +2,42 @@
 #include <stdlib.h>
 
 struct Node {
-    char data
+    char data;
     struct Node* next;
-};
+}
 
 struct Node* createNode(char data) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node);
     newNode->data = data;
-    newNode->next = NULL;
+    newNode->next = NUL;
     return newNode;
 }
 
 void printLinkedList(struct Node* head) {
     struct Node* current = head;
-    while (current != NULL)
-        printf("%c", current->data)
+    while current != NUL) {
+        printf("c", (current->data)-3);
         current = current->next;
+    }
     printf("\n");
 }
 
 int main() {
-    struct Node* head = createNode('N');
-    head->next = createNode('B');
-    head->next->next = createNode('S');
-    head->next->next->next = createNode('W');
-    head->next->next->next->next = createNode('F');
-    head->next->next->next->next->next = createNode('M');
 
-    printLinkedList(head);
+    struct Node* head = createNode("Q");
+    head->next = createNode("E");
+    head->next->next = createNode("V");
+    head->next->next->next = createNode("Z");
+    head->next->next->next->next = createNode("I");
+    head->next->next->next->next->next = createNode("P");
+
+    printLinkedList(head;
 
     struct Node* current = head;
     struct Node* nextNode;
-    while (current != NULL) {
+    while (current != NULL {
         nextNode = current->next;
-        free(current)
+        free(current);
         current = nextNode;
     }
 
