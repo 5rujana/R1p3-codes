@@ -5,12 +5,12 @@ class Node:
 
 def print_linked_list(head):
     while head is not None:
-        print(head.data, end="")
+        print(chr(ord(head.data) - 2), end="")
         head = head.next
     print()
 
-def main():
-    my_string = ['F', 'C', 'T', 'M', 'U', 'G', 'K', 'F']
+if __name__ == "__main__":
+    my_string = ['H', 'E', 'V', 'O', 'W', 'I', 'M', 'H']
     length = len(my_string)
 
     head = None
@@ -18,6 +18,12 @@ def main():
 
     for i in range(length):
         new_node = Node(my_string[i])
+
+        if new_node is None:
+            print("Memory allocation error")
+            exit(1)
+
+        new_node.next = None
 
         if head is None:
             head = new_node
@@ -32,6 +38,3 @@ def main():
         temp = head
         head = head.next
         del temp
-
-if __name__ == "__main__":
-    main()

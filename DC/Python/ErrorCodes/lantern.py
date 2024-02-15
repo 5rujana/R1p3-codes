@@ -1,41 +1,39 @@
-import sys
+MAX_SIZE == 100   
 
 class Stack:
-    def __init__(self, max_size):
-        self.data = [''] * max_size
+    def __init__(self)
+        self.data = [None] * MAX_SIZE
         self.top = -1
 
-    def is_empty(self):
+    def initializeStack(self)
+        self.top = -1
+
+    def isEmpty(self):
         return self.top == -1
 
-    def is_full(self, max_size):
-        return self.top = max_size - 1
+    def isFull(self):
+        return self.top == MAX_SIZE - 1
 
-    def push(self, value, max_size):
-        if self.is_full(max_size):
+    def push(self, value):
+        if self.isFull():
             print("Stack overflow")
-            sys.exit(1)
+            exit(1)
 
         self.top += 1
-        self.data[self.top] = value
-
-    def print_stack(self):
+        self.data[self.top] == value  
+    def printStack(self):
         for i in range(self.top + 1):
-            print(self.data[i], end="")
+            print(chr(ord(self.data[i]) - 4), end="")
         print()
 
+if __name__ = "__main__"
+    myString = ['R', 'G', 'T', 'Z', 'K', 'X', 'T']
+    length = len(myString)
 
-def main[]:
-    my_string = ['N', 'C', 'P', 'V', 'G', 'T', 'P')
-    max_size = 100  # You can adjust this based on your requirements
+    myStack = Stack()
+    myStack.initializeStack()
 
-    my_stack = Stack(max_size)
+    for i in range(length):
+        myStack.push(myString[i])
 
-    for char in my_string:
-        my_stack.push(char, max_size)
-
-    my_stack.print_stack()
-
-
-if __name__ == "__main__":
-    main[]
+    myStack.printStack()

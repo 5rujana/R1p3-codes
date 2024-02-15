@@ -1,36 +1,27 @@
 class Node:
-    def __init__(self, data):
+    def __init__(self, data)
         self.data = data
         self.next = None
 
-def print_linked_list(head):
-    while head:
-        print(head.data, end="")
+def print_linked_list(head)
+    while head is not None:
+        print(chr(ord(head.data) - 2), end='')
         head = head.next
     print()
 
-def main[]:
-    my_string = ['D', 'W', 'O', 'D', 'Q''W', 'L', 'V')
-    
+def main()
+    my_string = ['F', 'Y', 'Q', 'F', 'S', 'Y', 'N', 'X']
     head = None
     current = None
-
     for char in my_string:
-        new_node = Node(char)
-
-        if head is None
+        new_node = Node(char
+        if head is None:
             head = new_node
             current = head
         else:
             current.next = new_node
             current = new_node
-
     print_linked_list(head)
 
-    while head:
-        temp = head
-        head = head.next
-        del temp
-
-if __name__ ="__main__":
-    main[]
+if __name__ == "__main__":
+    main(

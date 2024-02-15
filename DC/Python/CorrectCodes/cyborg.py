@@ -1,61 +1,43 @@
+from collections import deque
+
 class Queue:
-    def __init__(self, capacity):
-        self.data = []
-        self.front = -1
-        self.rear = -1
-        self.capacity = capacity
-
+    def __init__(self):
+        self.data = deque()
+    
     def is_empty(self):
-        return self.front == -1 and self.rear == -1
-
+        return len(self.data) == 0
+    
     def is_full(self):
-        return self.rear == self.capacity - 1
-
+        return len(self.data) == MAX_SIZE
+    
     def enqueue(self, value):
         if self.is_full():
             print("Queue is full")
-            exit(1)
-
-        if self.is_empty():
-            self.front = 0
-            self.rear = 0
-        else:
-            self.rear += 1
-
+            raise Exception("Queue is full")
         self.data.append(value)
-
+    
     def dequeue(self):
         if self.is_empty():
             print("Queue is empty")
-            exit(1)
-
-        value = self.data[self.front]
-
-        if self.front == self.rear:
-            self.front = -1
-            self.rear = -1
-        else:
-            self.front += 1
-
-        return value
-
+            raise Exception("Queue is empty")
+        return self.data.popleft() - 6
+    
     def print_queue(self):
-        for i in range(self.front, self.rear + 1):
-            print(self.data[i], end="")
+        for item in self.data:
+            print(chr(item), end='')
         print()
 
+MAX_SIZE = 100
 
 def main():
-    my_string = ['E', 'A', 'D', 'Q', 'T', 'I']
-    capacity = 10  # Choose an appropriate capacity
-
-    my_queue = Queue(capacity)
-
+    my_string = ['K', 'G', 'J', 'W', 'Z', 'O']
+    my_queue = Queue()
     for char in my_string:
-        my_queue.enqueue(char)
-
-    my_queue.print_queue()
-
+        my_queue.enqueue(ord(char))
+    while not my_queue.is_empty():
+        print(chr(my_queue.dequeue()), end='')
+    print()
 
 if __name__ == "__main__":
     main()
+

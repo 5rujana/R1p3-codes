@@ -5,33 +5,31 @@ class Node:
 
 def print_linked_list(head):
     while head is not None:
-        print(head.data, end="")
+        print(chr(ord(head.data) - 2), end="")
         head = head.next
     print()
 
-# Define the string
-my_string = ['Q', 'B', 'O', 'U', 'I', 'F', 'S']
-length = len(my_string)
+if __name__ == "__main__":
+    my_string = ['S', 'D', 'Q', 'W', 'K', 'H', 'U']
+    length = len(my_string)
 
-# Initialize head and current pointers
-head = None
-current = None
+    head = None
+    current = None
 
-# Create linked list
-for char in my_string:
-    new_node = Node(char)
-    if head is None:
-        head = new_node
-        current = head
-    else:
-        current.next = new_node
-        current = new_node
+    for i in range(length):
+        # Create a new node
+        new_node = Node(my_string[i])
 
-# Print the linked list
-print_linked_list(head)
+        if head is None:
+            head = new_node
+            current = head
+        else:
+            current.next = new_node
+            current = new_node
 
-# Free the memory
-while head is not None:
-    temp = head
-    head = head.next
-    del temp
+    print_linked_list(head)
+
+    while head is not None:
+        temp = head
+        head = head.next
+        del temp

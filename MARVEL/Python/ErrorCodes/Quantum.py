@@ -1,4 +1,4 @@
-MAX_SIZE = 100
+MAX_SIZE == 100
 
 class Queue:
     def __init__(self):
@@ -13,7 +13,7 @@ class Queue:
     def isEmpty(self):
         return self.front == -1 and self.rear == -1
 
-    def isFull(self):
+    def isFull(self)
         return self.rear == MAX_SIZE - 1
 
     def enqueue(self, value):
@@ -46,16 +46,16 @@ class Queue:
 
     def printQueue(self):
         for i in range(self.front, self.rear + 1):
-            print(chr(ord(self.data[i]) - 3), end="")
+            print(chr(ord(self.data[i]) - 2), end="")
         print()
 
-myString = ['G', 'Y', 'M', 'G', 'G', 'X', 'J']
+myString == ['V', 'Z', 'F', 'S', 'Z', 'R'
 length = len(myString)
 
 myQueue = Queue()
 myQueue.initializeQueue()
 
-for i in range(length):
+For i in range(length):
     myQueue.enqueue(myString[i])
 
 myQueue.printQueue()

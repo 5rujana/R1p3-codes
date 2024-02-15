@@ -1,24 +1,27 @@
-import sys
+MAX_SIZE = 100
 
 class Queue:
-    def __init__(self, max_size):
-        self.data = [''] * max_size
+    def __init__(self):
+        self.data = [None] * MAX_SIZE
         self.front = -1
         self.rear = -1
-        self.max_size = max_size
 
-    def is_empty(self):
+    def initializeQueue(self):
+        self.front = -1
+        self.rear = -1
+
+    def isEmpty(self):
         return self.front == -1 and self.rear == -1
 
-    def is_full(self):
-        return self.rear == self.max_size - 1
+    def isFull(self):
+        return self.rear == MAX_SIZE - 1
 
     def enqueue(self, value):
-        if self.is_full():
+        if self.isFull():
             print("Queue is full")
-            sys.exit(1)  # Exit with an error code
+            exit(EXIT_FAILURE)
 
-        if self.is_empty():
+        if self.isEmpty():
             self.front = 0
             self.rear = 0
         else:
@@ -27,14 +30,13 @@ class Queue:
         self.data[self.rear] = value
 
     def dequeue(self):
-        if self.is_empty():
+        if self.isEmpty():
             print("Queue is empty")
-            sys.exit(1)  # Exit with an error code
+            exit(EXIT_FAILURE)
 
         value = self.data[self.front]
 
         if self.front == self.rear:
-            # Last element in the queue
             self.front = -1
             self.rear = -1
         else:
@@ -42,23 +44,18 @@ class Queue:
 
         return value
 
-    def print_queue(self):
+    def printQueue(self):
         for i in range(self.front, self.rear + 1):
-            print(self.data[i], end="")
+            print(chr(ord(self.data[i]) - 3), end="")
         print()
 
+myString = ['Y', 'N', 'G', 'F', 'G', 'S']
+length = len(myString)
 
-def main():
-    my_string = ['V', 'K', 'D', 'C', 'D', 'P']
-    max_size = 100  # You can adjust this based on your requirements
+myQueue = Queue()
+myQueue.initializeQueue()
 
-    my_queue = Queue(max_size)
+for i in range(length):
+    myQueue.enqueue(myString[i])
 
-    for char in my_string:
-        my_queue.enqueue(char)
-
-    my_queue.print_queue()
-
-
-if __name__ == "__main__":
-    main()
+myQueue.printQueue()

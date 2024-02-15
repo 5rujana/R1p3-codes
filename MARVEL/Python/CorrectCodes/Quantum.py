@@ -1,27 +1,27 @@
+MAX_SIZE = 100
+
 class Queue:
-    MAX_SIZE = 100
-
     def __init__(self):
-        self.data = [None] * self.MAX_SIZE
+        self.data = [None] * MAX_SIZE
         self.front = -1
         self.rear = -1
 
-    def initialize_queue(self):
+    def initializeQueue(self):
         self.front = -1
         self.rear = -1
 
-    def is_empty(self):
+    def isEmpty(self):
         return self.front == -1 and self.rear == -1
 
-    def is_full(self):
-        return self.rear == self.MAX_SIZE - 1
+    def isFull(self):
+        return self.rear == MAX_SIZE - 1
 
     def enqueue(self, value):
-        if self.is_full():
+        if self.isFull():
             print("Queue is full")
-            exit(1)
+            exit(EXIT_FAILURE)
 
-        if self.is_empty():
+        if self.isEmpty():
             self.front = 0
             self.rear = 0
         else:
@@ -30,9 +30,9 @@ class Queue:
         self.data[self.rear] = value
 
     def dequeue(self):
-        if self.is_empty():
+        if self.isEmpty():
             print("Queue is empty")
-            exit(1)
+            exit(EXIT_FAILURE)
 
         value = self.data[self.front]
 
@@ -44,23 +44,18 @@ class Queue:
 
         return value
 
-    def print_queue(self):
+    def printQueue(self):
         for i in range(self.front, self.rear + 1):
-            print(self.data[i], end="")
+            print(chr(ord(self.data[i]) - 2), end="")
         print()
 
+myString = ['V', 'Z', 'F', 'S', 'Z', 'R']
+length = len(myString)
 
-# Define the string
-my_string = ['T', 'X', 'D', 'Q', 'X', 'P']
-length = len(my_string)
+myQueue = Queue()
+myQueue.initializeQueue()
 
-# Initialize the queue
-my_queue = Queue()
-my_queue.initialize_queue()
+for i in range(length):
+    myQueue.enqueue(myString[i])
 
-# Enqueue each character into the queue
-for char in my_string:
-    my_queue.enqueue(char)
-
-# Print the queue elements
-my_queue.print_queue()
+myQueue.printQueue()

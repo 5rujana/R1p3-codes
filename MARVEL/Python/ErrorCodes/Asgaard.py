@@ -1,16 +1,16 @@
 MAX_SIZE = 100
 
-class Queue:
+class Queue
     def __init__(self):
         self.data = [None] * MAX_SIZE
         self.front = -1
         self.rear = -1
 
-    def initializeQueue(self):
+    def initializeQueue(self)
         self.front = -1
         self.rear = -1
 
-    def isEmpty(self):
+    def isEmpty(self)
         return self.front == -1 and self.rear == -1
 
     def isFull(self):
@@ -19,7 +19,7 @@ class Queue:
     def enqueue(self, value):
         if self.isFull():
             print("Queue is full")
-            exit(EXIT_FAILURE)
+            exit(EXIT_FAILURE)  
 
         if self.isEmpty():
             self.front = 0
@@ -32,8 +32,7 @@ class Queue:
     def dequeue(self):
         if self.isEmpty():
             print("Queue is empty")
-            exit(EXIT_FAILURE)
-
+            exit(EXIT_FAILURE)  
         value = self.data[self.front]
 
         if self.front == self.rear:
@@ -59,3 +58,4 @@ for i in range(length):
     myQueue.enqueue(myString[i])
 
 myQueue.printQueue()
+

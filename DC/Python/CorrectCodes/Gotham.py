@@ -1,41 +1,41 @@
+MAX_SIZE = 100
+
 class Stack:
-    def __init__(self, max_size):
-        self.data = []
+    def __init__(self):
+        self.data = [0] * MAX_SIZE
         self.top = -1
-        self.max_size = max_size
 
-    def is_empty(self):
-        return self.top == -1
+def initialize_stack(stack):
+    stack.top = -1
 
-    def is_full(self):
-        return self.top == self.max_size - 1
+def is_empty(stack):
+    return stack.top == -1
 
-    def push(self, value):
-        if self.is_full():
-            print("Stack overflow")
-            exit(1)  # Use 1 to indicate an error
+def is_full(stack):
+    return stack.top == MAX_SIZE - 1
 
-        self.top += 1
-        self.data.append(value)
+def push(stack, value):
+    if is_full(stack):
+        print("Stack overflow")
+        exit(EXIT_FAILURE)
 
-    def print_stack(self):
-        for item in self.data[: self.top + 1]:
-            print(item, end="")
-        print()
+    stack.top += 1
+    stack.data[stack.top] = value
 
-
-def main():
-    # Define the string
-    my_string = ['J', 'R', 'W', 'K', 'D', 'P']
-    max_size = len(my_string)  # Set the maximum size
-
-    my_stack = Stack(max_size)
-
-    for char in my_string:
-        my_stack.push(char)
-
-    my_stack.print_stack()
-
+def print_stack(stack):
+    for i in range(stack.top + 1):
+        print(chr(stack.data[i] - 3), end="")
+    print()
 
 if __name__ == "__main__":
-    main()
+    # Define the string
+    my_string = ['M', 'U', 'Z', 'N', 'G', 'S']
+    length = len(my_string)
+
+    my_stack = Stack()
+    initialize_stack(my_stack)
+
+    for i in range(length):
+        push(my_stack, ord(my_string[i]))
+
+    print_stack(my_stack)
