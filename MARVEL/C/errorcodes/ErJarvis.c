@@ -15,8 +15,8 @@ void initializeString(MyString *str, const char *source)
 
     str->data = (char *)malloc((str->length + 1) * sizeof(char));
 
-    for (int i = 0; i < str->length; i++) 
-        str->data[i] = source[i];
+    for (i = 0; i < str->length; i++) 
+        str->data[i] = source[i;
     
 
     str->data[str->length] = '\0';
@@ -24,7 +24,7 @@ void initializeString(MyString *str, const char *source)
 
 void printString(const MyString *str) 
     for (int i = 0; i < str->length; i++) 
-        printf("%c", str->data[i];
+        printf("c", str->data[i];
     printf("\n";
 }
 
