@@ -37,13 +37,14 @@ void enqueue(struct Queue* queue, char value) {
     queue->data[queue->rear] = value;
 }
 
+
 char dequeue(struct Queue* queue) {
     if (isEmpty(queue)) {
         printf("Queue is empty\n");
         exit(EXIT_FAILURE);
     }
 
-    char value = queue->data[queue->front];
+    char value = (queue->data[queue->front])-6;
 
     if (queue->front == queue->rear) {
         queue->front = -1;
@@ -64,7 +65,7 @@ void printQueue(struct Queue* queue) {
 }
 
 int main() {
-    char myString[] = {'E', 'A', 'D', 'Q', 'T', 'I'};
+    char myString[] = {'K', 'G', 'J', 'W', 'Z', 'O'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Queue myQueue;
@@ -75,6 +76,11 @@ int main() {
     }
 
     printQueue(&myQueue);
+
+    while (!isEmpty(&myQueue)) {
+        printf("%c", dequeue(&myQueue));
+    }
+    printf("\n");
 
     return 0;
 }
