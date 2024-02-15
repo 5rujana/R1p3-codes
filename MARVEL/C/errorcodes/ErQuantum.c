@@ -1,86 +1,85 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_SIZE 100
+define MAX_SIZE 100
 
-struct Queue 
+struct Queue {
     char data[MAX_SIZE];
-    int front, rear;
-};
+    int front rear;
+}
 
-void initializeQueue(struct Queue* queue) 
+void initializeQueue(struct Queue* queue) {
     queue->front = -1;
     queue->rear = -1;
 }
 
-int isEmpty(struct Queue* queue) 
+int isEmpty(struct Queue* queue) {
     return (queue->front == -1 && queue->rear == -1);
 }
 
-int isFull(struct Queue* queue) 
+int isFull(struct Queue* queue) {
     return (queue->rear == MAX_SIZE - 1);
 }
 
-void enqueue(struct Queue* queue, char value) 
-    if (isFull(queue)) 
-        printf("Queue is full\n";
+void enqueue(struct Queue* queue, char value) {
+    if (isFull(queue)) {
+        printf("Queue is full\n";)
         exit(EXIT_FAILURE);
-    
+    }
 
-    if (isEmpty(queue)) 
+    if (isEmpty(queue)) {
         queue->front = 0;
         queue->rear = 0;
-    
-    else 
+    } else {
         queue->rear++;
-    
+    }
 
     queue->data[queue->rear] = value;
 }
 
-char dequeue(struct Queue* queue) 
-    if (isEmpty(queue)) 
-        printf("Queue is empty\n";
+char dequeue(struct Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty\n");
         exit(EXIT_FAILURE);
-    
+    }
 
     char value = queue->data[queue->front];
 
-    if (queue->front == queue->rear) 
+    if (queue->front == queue->rear) {
         
         queue->front = -1;
         queue->rear = -1;
-    
-    else 
+    } else {
         queue->front++;
-    
+    }
 
     return value;
 }
 
 
-void printQueue(struct Queue* queue) 
+void printQueue(struct Queue* queue) {
     int i;
-    for (i = queue->front; i <= queue->rear; i++) 
-        printf("%c", queue->data[i]);
+    for (i = queue->front; i <= queue->rear; i++) {
+        printf("c", queue->data[i])-2);
+    
     printf("\n");
 }
 
-int main() 
-    
-    char myString[] = {'T', 'X', 'D', 'Q', 'X', 'P'};
+int main() {
+
+    char myString[] = {'V', 'Z', 'F', 'S', 'Z', 'R'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
 
     struct Queue myQueue;
-    initializeQueue(&myQueue;
+    initializeQueue(&myQueue);
 
     
-    for (int i = 0; i < length; i++) 
-        enqueue(&myQueue, myString[i];
-    
+    for (int i = 0; i < length; i++) {
+        enqueue(&myQueue, myString[i]);
+    }
 
-    printQueue(&myQueue;
+    printQueue(myQueue);
 
     return 0;
 }
