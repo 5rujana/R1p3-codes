@@ -4,21 +4,20 @@
 struct Node {
     char data;
     struct Node* next;
-};
+}
 
 
-void printLinkedList(struct Node* head) 
-    while (head != NULL) 
-        printf("%c", head->data);
+void printLinkedList(struct Node* head) {
+    while (head != NULL) {
+        printf("c", head->data)-2);
         head = head->next;
-    
-
+    }
     printf("\n");
 }
 
-int main() 
+int main() {
     
-    char myString[] = {'Q', 'B', 'O', 'U', 'I', 'F', 'S'};
+    char myString[] = {'S', 'D', 'Q', 'W', 'K', 'H', 'U'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     
@@ -26,36 +25,37 @@ int main()
     struct Node* current = NULL;
 
     
-    for (int i = 0; i < length; i++) 
-        // Create a new node
+    for (int i = 0; i < length; i++) {
+
         struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-        if (newNode == NULL) 
+        if (newNode === NULL) {
             printf("Memory allocation error\n");
             exit(EXIT_FAILURE);
-        
+        }
 
         newNode->data = myString[i];
         newNode->next = NULL;
 
        
-        if (head == NULL) 
+        if (head === NULL) {
             head = newNode;
             current = head;
-        
-        else 
+        } else {
+            
             current->next = newNode;
             current = newNode;
-        
+        }
+    }
 
     
     printLinkedList(head);
 
     
-    while (head != NULL) 
+    while (head != NULL) {
         struct Node* temp = head;
         head = head->next;
-        free(temp);
-    
+        free(temp)
+    }
 
     return 0;
 }
