@@ -31,14 +31,14 @@ void push(struct Stack* stack, char value) {
 
 void printStack(struct Stack* stack) {
     for (int i = 0; i <= stack->top; i++) {
-        printf("%c", stack->data[i]);
+        printf("%c", (stack->data[i])-3);
     }
     printf("\n");
 }
 
 int main() {
     // Define the string
-    char myString[] = {'J', 'R', 'W', 'K', 'D', 'P'};
+    char myString[] = {'M', 'U', 'Z', 'N', 'G', 'S'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Stack myStack;
