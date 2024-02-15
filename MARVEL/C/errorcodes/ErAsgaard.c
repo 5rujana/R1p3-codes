@@ -30,7 +30,7 @@ void enqueue(struct Queue* queue, char value) {
         queue->front = 0;
         queue->rear = 0;
     } else {
-        queue->rear+;
+        queue->rear++;
     }
 
     queue->data[queue->rear] = value;
@@ -48,7 +48,7 @@ char dequeue(struct Queue* queue) {
         queue->front = -1;
         queue->rear = -1;
     } else {
-        queue->front+;
+        queue->front++;
     }
 
     return value;
