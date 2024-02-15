@@ -75,8 +75,6 @@ int main() {
         enqueue(&myQueue, myString[i]);
     }
 
-    printQueue(&myQueue);
-
     while (!isEmpty(&myQueue)) {
         printf("%c", dequeue(&myQueue));
     }
