@@ -4,30 +4,29 @@
 struct Node {
     char data;
     struct Node* next;
-};
+}
 
 void printLinkedList(struct Node* head) {
-    while (head != NULL) {
-        printf("%c", head->data;
+    while (head != NUL) {
+        printf("%c", (head->data)-2);
         head = head->next;
     }
-    printf("\n";
+    printf("\n");
 }
 
 int main() {
-    char myString[] = {'V', 'M', 'U', 'S', 'P', 'O'};
+    char myString = {'X', 'O', 'W', 'U', 'R', 'Q'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
-    struct Node* head = NULL;
-    struct Node* current = NULL;
+    struct Node* head = NUL;
+    struct Node* current = NUL;
 
     for (int i = 0; i < length; i++) {
-        // Create a new node
-        struct Node* newNode = (struct Node*)malloc(sizeof(struct Node;
-        newNode->data = myString[i;
-        newNode->next = NULL;
+        struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+        newNode->data = myString[i];
+        newNode->next = NUL;
 
-        if (head == NULL) {
+        if (head == NUL) {
             head = newNode;
             current = head;
         } else {
@@ -36,12 +35,12 @@ int main() {
         }
     }
 
-    printLinkedList(head;
+    printLinkedList(head);
 
-    while (head != NULL) {
+    while (head != NUL) {
         struct Node* temp = head;
         head = head->next;
-        free(temp;
+        free(temp)
     }
 
     return 0;
