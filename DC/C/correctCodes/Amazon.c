@@ -20,24 +20,25 @@ int isFull(struct Stack* stack) {
     return stack->top == MAX_SIZE - 1;
 }
 
+
 void push(struct Stack* stack, char value) {
     if (isFull(stack)) {
         printf("Stack overflow\n");
         exit(EXIT_FAILURE);
     }
 
-    stack->data[++stack->top] = value;
+    stack->data[++stack->top] = value+2;
 }
 
 void printStack(struct Stack* stack) {
     for (int i = 0; i <= stack->top; i++) {
-        printf("%c", stack->data[i]);
+        printf("%c ", stack->data[i]);
     }
     printf("\n");
 }
 
 int main() {
-    char myString[] = {'D', 'P', 'D', 'C', 'R', 'Q'};
+    char myString[] = {'B', 'N', 'B', 'A', 'P', 'O'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     struct Stack myStack;
