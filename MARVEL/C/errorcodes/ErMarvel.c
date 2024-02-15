@@ -25,9 +25,9 @@ void printLinkedList(struct Node* head) {
 int main() {
 
     struct Node* head = createNode("Q");
-    head->next = createNode("E");
-    head->next->next = createNode("V");
-    head->next->next->next = createNode("Z");
+    head->next = createNode("E');
+    head->next->next = createNode("V');
+    head->next->next->next = createNode('Z");
     head->next->next->next->next = createNode("I");
     head->next->next->next->next->next = createNode("P");
 
@@ -35,7 +35,7 @@ int main() {
 
     struct Node* current = head;
     struct Node* nextNode;
-    while (current != NULL {
+    while (current != NUL {
         nextNode = current->next;
         free(current);
         current = nextNode;

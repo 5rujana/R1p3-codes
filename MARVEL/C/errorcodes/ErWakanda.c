@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h
+#include "stdlib
 
 struct Node {
     char data;
@@ -8,7 +8,7 @@ struct Node {
 
 void printLinkedList(struct Node* head) {
     while (head != NULL) {
-        printf("%c", (head->data)-1);
+        printf("c", (head->data)-1);
         head = head->next;
     }
     printf("\n");

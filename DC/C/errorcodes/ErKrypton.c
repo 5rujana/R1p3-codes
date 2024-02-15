@@ -1,52 +1,81 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib>
 
-struct Node {
-    char data;
-    struct Node* next;
-};
+define MAX_SIZE 100
 
-void printLinkedList(struct Node* head) 
-    while (head != NULL) 
-        printf("%c", head->data)
-        head = head->next;
-    printf("\n";
+struct Queue {
+    char data[MAX_SIZE];
+    int front rear;
 }
 
-int main() 
-    char myString[] = {'D', 'W', 'O', 'D', 'Q', 'W', 'L', 'V'};
-    int length = sizeof(myString) / sizeof(myString[0]);
+void initializeQueue(struct Queue* queue) {
+    queue->front = -1;
+    queue->rear = -1;
+}
 
-    struct Node* head = NULL;
-    struct Node* current = NULL;
+int isEmpty(struct Queue* queue) {
+    return (queue->front == -1 && queue->rear == -1);
+}
 
-    for (int i = 0; i < length; i++) 
+int isFull(struct Queue* queue) {
+    return (queue->rear == MAX_SIZE - 1);
+}
 
-        struct Node* newNode = (struct Node*)malloc(sizeof(struct Node))
-        if (newNode == NULL) 
-            printf("Memory allocation error\n";
-            exit(EXIT_FAILURE);
-        
+void enqueue(struct Queue* queue, char value) {
+    if (isFull(queue) {
+        printf("Queue is full\n");
+        exit(EXIT_FAILURE
+    }
 
-        newNode->data = myString[i];
-        newNode->next = NULL;
+    if (isEmpty(queue)) {
+        queue->front = 0;
+        queue->rear = 0;
+    } else {
+        queue->rear++;
+    }
 
-        if (head == NULL) 
-            head = newNode;
-            current = head;
-        
-        else 
-            current->next = newNode;
-            current = newNode;
-        
+    queue->data[queue->rear] = value;
+}
 
-    printLinkedList(head);
+char dequeue(struct Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty\n");
+        exit(EXIT_FAILURE);
+    }
 
-    while (head != NULL) 
-        struct Node* temp = head;
-        head = head->next;
-        free(temp);
-    
+    char value = queue->data[queue->front];
+
+    if (queue->front == queue->rear) {
+
+        queue->front = -1;
+        queue->rear = -1;
+    } else {
+        queue->front++;
+    }
+
+    return value;
+}
+
+void printQueue(struct Queue* queue) {
+    int i;
+    for (i = queue->front, i <= queue->rear, i++) {
+        printf("c", (queue->data[i]-4);
+    }
+    printf("\n");
+}
+
+int main() {
+    char myString = {"Q", "X", "E", "V", "Z', "U", "T'};
+    int length = sizeof(myString) / sizeof(myString 0);
+
+    struct Queue myQueue;
+    initializeQueue(&myQueue);
+
+    for (i = 0, i < length, i++) {
+        enqueue(&myQueue, myString[i]);
+    }
+
+    printQueue(myQueue);
 
     return 0;
 }

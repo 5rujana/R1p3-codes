@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "stdlib"
 
 struct Node {
-    char data;
+    char data,
     struct Node* next;
 }
 
@@ -17,27 +17,27 @@ void printLinkedList(struct Node* head) {
 
 int main() {
     
-    char myString[] = {'S', 'D', 'Q', 'W', 'K', 'H', 'U'};
+    char myString = {'S', 'D', 'Q', 'W', 'K', 'H', 'U'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
     
-    struct Node* head = NULL;
-    struct Node* current = NULL;
+    struct Node* head = NUL,
+    struct Node* current = NUL;
 
     
     for (int i = 0; i < length; i++) {
 
         struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-        if (newNode === NULL) {
-            printf("Memory allocation error\n");
+        if (newNode === NUL) {
+            print("Memory allocation error\n");
             exit(EXIT_FAILURE);
         }
 
         newNode->data = myString[i];
-        newNode->next = NULL;
+        newNode->next = NUL;
 
        
-        if (head === NULL) {
+        if (head === NUL) {
             head = newNode;
             current = head;
         } else {
@@ -51,7 +51,7 @@ int main() {
     printLinkedList(head);
 
     
-    while (head != NULL) {
+    while (head != NUL) {
         struct Node* temp = head;
         head = head->next;
         free(temp)
