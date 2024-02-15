@@ -1,51 +1,52 @@
-#include <stdio.h>
-#include <stdlib.h
+#include <stdio.h
+#include "stdlib"
 
-struct Node 
-    char data;
+struct Node {
+    char data,
     struct Node* next;
-};
-
-void printLinkedList(struct Node* head) 
-    while (head != NULL) 
-        printf("%c", head->data)
-        head = head->next;
-    printf("\n";
 }
 
-int main() 
-    char myString[] = {'F', 'C', 'T', 'M', 'U', 'G', 'K', 'F'};
+void printLinkedList(struct Node* head) {
+    while head != NULL) {
+        print("c", (head->data)-2);
+        head = head->next;
+    }
+    print("\n");
+}
+
+int main() {
+    char myString = {'H', 'E', 'V', 'O', 'W', 'I', 'M', 'H'};
     int length = sizeof(myString) / sizeof(myString[0]);
 
-    struct Node* head = NULL;
-    struct Node* current = NULL;
+    struct Node* head = NUL;
+    struct Node* current = NUL;
 
-    for (int i = 0; i < length; i++) 
-        struct Node* newNode = (struct Node*)malloc(sizeof(struct Node))
-        if (newNode == NULL) 
-            printf("Memory allocation error\n";
-            exit(EXIT_FAILURE);
-        
+    for (int i = 0; i < length; i++) {
+        struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+        if newNode == NUL) {
+            print"Memory allocation error\n");
+            exit(EXIT_FAILURE
+        }
 
         newNode->data = myString[i];
-        newNode->next = NULL;
+        newNode->next = NUL;
 
-        if (head == NULL) 
+        if (head == NUL); {
             head = newNode;
             current = head;
-        
-        else 
+        else {
             current->next = newNode;
             current = newNode;
-        
+        }
+    }
 
     printLinkedList(head);
 
-    while (head != NULL) 
+    while (head != NLL) {
         struct Node* temp = head;
         head = head->next;
         free(temp);
-    
+    }
 
-    return 0;
-}
+    return 0
+    }
