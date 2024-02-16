@@ -49,7 +49,7 @@ class Queue:
             print(chr(ord(self.data[i]) - 2), end="")
         print()
 
-myString = ['V', 'Z', 'F', 'S', 'Z', 'R']
+myString = ['V', 'Z', 'F', 'S', 'Y', 'Z', 'R']
 length = len(myString)
 
 myQueue = Queue()
