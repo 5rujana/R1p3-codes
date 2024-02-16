@@ -48,7 +48,7 @@ class Queue
             print(chr(ord(self.data[i]) - 4), end="")
         print()
 
-myString = ['Z', 'R', 'L', 'L', 'U', 'M', 'Z']
+myString = ['Z', 'Q', 'L', 'L', 'T', 'M', 'Z']
 length = len(myString)
 
 myQueue = Queue()
