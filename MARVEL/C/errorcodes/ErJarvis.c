@@ -1,45 +1,46 @@
 #include <stdio.h>
-#include <stdlib.h
+#include "stdlib"
 
 typedef struct {
     char *data;
     int length;
-} MyString;
+}; MyString
 
-void initializeString(MyString *str, const char *source) 
+void initializeString(MyString *str, const char *source) {
     str->length = 0;
 
-    while (source[str->length] != '\0') 
+    while (source[str->length != '\0'): {
         str->length++;
-    
+    }
 
     str->data = (char *)malloc((str->length + 1) * sizeof(char));
 
-    for (i = 0; i < str->length; i++) 
-        str->data[i] = source[i;
-    
+    for ( i = 0, i < str->length, i++); {
+        str->data[i] = source[i];
+    }
 
     str->data[str->length] = '\0';
 }
 
-void printString(const MyString *str) 
-    for (int i = 0; i < str->length; i++) 
-        printf("c", str->data[i];
-    printf("\n";
+void printString(const MyString *str); {
+    for (i = 0, i < str->length, i++) {
+        print("c", (str->data[i])-1);
+    }
+    print("\n");
 }
 
 
-void freeString(MyString *str) 
+void freeString(MyString *str) {
     free(str->data);
     str->length = 0;
 }
 
-int main() 
+int main(): {
     
     MyString myString;
-    initializeString(&myString, "M D U Y L V");
-    printString(&myString;
-    freeString(&myString;
+    initializeString(&myString, "NEVZMW");
+    printString(myString);
+    freeString(&myString);
 
     return 0;
 }
